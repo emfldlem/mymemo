@@ -17,7 +17,8 @@ namespace WindowsFormsApplication1
     {
         string stryear = DateTime.Now.Year.ToString();
         private string StrSQL = "Data Source=localhost;Database=mymemo;User Id=root;Password=apmsetup; CHARSET=utf8"; //데이터베이스 연결 문자열
-        private string Data_Num;
+        private string Data_Num;        //하루일정표 리스트 선택 번호
+        public int todayscore;
 
         public Form1()
         {
@@ -320,6 +321,40 @@ namespace WindowsFormsApplication1
 
         }
 
-        
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        public void todayscorechanged()
+        {
+            if (this.num1.Checked == true)
+                this.lblImg.ImageIndex = 0;
+            else if (this.num2.Checked == true)
+                this.lblImg.ImageIndex = 1;
+            else if (this.num3.Checked == true)
+                this.lblImg.ImageIndex = 2;
+            else if (this.num4.Checked == true)
+                this.lblImg.ImageIndex = 3;
+            else if (this.num5.Checked == true)
+                this.lblImg.ImageIndex = 4;
+            else if (this.num6.Checked == true)
+                this.lblImg.ImageIndex = 5;
+            else if (this.num7.Checked == true)
+                this.lblImg.ImageIndex = 6;
+            else if (this.num8.Checked == true)
+                this.lblImg.ImageIndex = 7;
+            else if (this.num9.Checked == true)
+                this.lblImg.ImageIndex = 8;
+            else if (this.num10.Checked == true)
+                this.lblImg.ImageIndex = 9;
+
+        }
+
+        private void todayscore_confirm_Click(object sender, EventArgs e)
+        {
+            todayscorechanged();
+        }
     }
 }

@@ -31,9 +31,9 @@ namespace WindowsFormsApplication1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.dtpTime = new System.Windows.Forms.DateTimePicker();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btntoday_Modify = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btndaily_save = new System.Windows.Forms.Button();
@@ -49,11 +49,25 @@ namespace WindowsFormsApplication1
             this.btntodaysave_Click = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.todayscore = new System.Windows.Forms.TabControl();
+            this.mymemoview = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.num10 = new System.Windows.Forms.RadioButton();
+            this.num9 = new System.Windows.Forms.RadioButton();
+            this.num8 = new System.Windows.Forms.RadioButton();
+            this.num7 = new System.Windows.Forms.RadioButton();
+            this.num6 = new System.Windows.Forms.RadioButton();
+            this.num5 = new System.Windows.Forms.RadioButton();
+            this.num4 = new System.Windows.Forms.RadioButton();
+            this.num3 = new System.Windows.Forms.RadioButton();
+            this.num2 = new System.Windows.Forms.RadioButton();
+            this.num1 = new System.Windows.Forms.RadioButton();
+            this.lblImg = new System.Windows.Forms.Label();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.todayscore_confirm = new System.Windows.Forms.Button();
             this.tabPage3.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.todayscore.SuspendLayout();
+            this.mymemoview.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -220,26 +234,195 @@ namespace WindowsFormsApplication1
             this.label2.TabIndex = 1;
             this.label2.Text = "시간";
             // 
-            // todayscore
+            // mymemoview
             // 
-            this.todayscore.Controls.Add(this.tabPage1);
-            this.todayscore.Controls.Add(this.tabPage3);
-            this.todayscore.Controls.Add(this.tabPage2);
-            this.todayscore.Location = new System.Drawing.Point(12, 55);
-            this.todayscore.Name = "오늘의 점수";
-            this.todayscore.SelectedIndex = 0;
-            this.todayscore.Size = new System.Drawing.Size(564, 460);
-            this.todayscore.TabIndex = 2;
+            this.mymemoview.Controls.Add(this.tabPage1);
+            this.mymemoview.Controls.Add(this.tabPage3);
+            this.mymemoview.Controls.Add(this.tabPage2);
+            this.mymemoview.Location = new System.Drawing.Point(12, 55);
+            this.mymemoview.Name = "mymemoview";
+            this.mymemoview.SelectedIndex = 0;
+            this.mymemoview.Size = new System.Drawing.Size(564, 460);
+            this.mymemoview.TabIndex = 2;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.todayscore_confirm);
+            this.tabPage2.Controls.Add(this.num10);
+            this.tabPage2.Controls.Add(this.num9);
+            this.tabPage2.Controls.Add(this.num8);
+            this.tabPage2.Controls.Add(this.num7);
+            this.tabPage2.Controls.Add(this.num6);
+            this.tabPage2.Controls.Add(this.num5);
+            this.tabPage2.Controls.Add(this.num4);
+            this.tabPage2.Controls.Add(this.num3);
+            this.tabPage2.Controls.Add(this.num2);
+            this.tabPage2.Controls.Add(this.num1);
+            this.tabPage2.Controls.Add(this.lblImg);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(556, 431);
             this.tabPage2.TabIndex = 3;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "오늘의 점수";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // num10
+            // 
+            this.num10.AutoSize = true;
+            this.num10.Checked = true;
+            this.num10.Font = new System.Drawing.Font("나눔바른고딕OTF 옛한글", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.num10.ImageKey = "num1.jpg";
+            this.num10.Location = new System.Drawing.Point(480, 325);
+            this.num10.Name = "num10";
+            this.num10.Size = new System.Drawing.Size(59, 29);
+            this.num10.TabIndex = 1;
+            this.num10.TabStop = true;
+            this.num10.Text = "10";
+            this.num10.UseVisualStyleBackColor = true;
+            // 
+            // num9
+            // 
+            this.num9.AutoSize = true;
+            this.num9.Checked = true;
+            this.num9.Font = new System.Drawing.Font("나눔바른고딕OTF 옛한글", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.num9.ImageKey = "(없음)";
+            this.num9.Location = new System.Drawing.Point(435, 325);
+            this.num9.Name = "num9";
+            this.num9.Size = new System.Drawing.Size(46, 29);
+            this.num9.TabIndex = 1;
+            this.num9.TabStop = true;
+            this.num9.Text = "9";
+            this.num9.UseVisualStyleBackColor = true;
+            // 
+            // num8
+            // 
+            this.num8.AutoSize = true;
+            this.num8.Font = new System.Drawing.Font("나눔바른고딕OTF 옛한글", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.num8.ImageKey = "(없음)";
+            this.num8.Location = new System.Drawing.Point(383, 325);
+            this.num8.Name = "num8";
+            this.num8.Size = new System.Drawing.Size(46, 29);
+            this.num8.TabIndex = 1;
+            this.num8.Text = "8";
+            this.num8.UseVisualStyleBackColor = true;
+            // 
+            // num7
+            // 
+            this.num7.AutoSize = true;
+            this.num7.Font = new System.Drawing.Font("나눔바른고딕OTF 옛한글", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.num7.ImageKey = "(없음)";
+            this.num7.Location = new System.Drawing.Point(331, 325);
+            this.num7.Name = "num7";
+            this.num7.Size = new System.Drawing.Size(46, 29);
+            this.num7.TabIndex = 1;
+            this.num7.Text = "7";
+            this.num7.UseVisualStyleBackColor = true;
+            // 
+            // num6
+            // 
+            this.num6.AutoSize = true;
+            this.num6.Font = new System.Drawing.Font("나눔바른고딕OTF 옛한글", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.num6.ImageKey = "(없음)";
+            this.num6.Location = new System.Drawing.Point(279, 325);
+            this.num6.Name = "num6";
+            this.num6.Size = new System.Drawing.Size(46, 29);
+            this.num6.TabIndex = 1;
+            this.num6.Text = "6";
+            this.num6.UseVisualStyleBackColor = true;
+            // 
+            // num5
+            // 
+            this.num5.AutoSize = true;
+            this.num5.Font = new System.Drawing.Font("나눔바른고딕OTF 옛한글", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.num5.ImageKey = "(없음)";
+            this.num5.Location = new System.Drawing.Point(227, 325);
+            this.num5.Name = "num5";
+            this.num5.Size = new System.Drawing.Size(46, 29);
+            this.num5.TabIndex = 1;
+            this.num5.Text = "5";
+            this.num5.UseVisualStyleBackColor = true;
+            // 
+            // num4
+            // 
+            this.num4.AutoSize = true;
+            this.num4.Font = new System.Drawing.Font("나눔바른고딕OTF 옛한글", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.num4.ImageKey = "(없음)";
+            this.num4.Location = new System.Drawing.Point(175, 325);
+            this.num4.Name = "num4";
+            this.num4.Size = new System.Drawing.Size(46, 29);
+            this.num4.TabIndex = 1;
+            this.num4.Text = "4";
+            this.num4.UseVisualStyleBackColor = true;
+            // 
+            // num3
+            // 
+            this.num3.AutoSize = true;
+            this.num3.Font = new System.Drawing.Font("나눔바른고딕OTF 옛한글", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.num3.ImageKey = "num1.jpg";
+            this.num3.Location = new System.Drawing.Point(123, 325);
+            this.num3.Name = "num3";
+            this.num3.Size = new System.Drawing.Size(46, 29);
+            this.num3.TabIndex = 1;
+            this.num3.Text = "3";
+            this.num3.UseVisualStyleBackColor = true;
+            // 
+            // num2
+            // 
+            this.num2.AutoSize = true;
+            this.num2.Font = new System.Drawing.Font("나눔바른고딕OTF 옛한글", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.num2.ImageKey = "(없음)";
+            this.num2.Location = new System.Drawing.Point(71, 325);
+            this.num2.Name = "num2";
+            this.num2.Size = new System.Drawing.Size(46, 29);
+            this.num2.TabIndex = 1;
+            this.num2.Text = "2";
+            this.num2.UseVisualStyleBackColor = true;
+            // 
+            // num1
+            // 
+            this.num1.AutoSize = true;
+            this.num1.Font = new System.Drawing.Font("나눔바른고딕OTF 옛한글", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.num1.ImageKey = "num1.jpg";
+            this.num1.Location = new System.Drawing.Point(19, 325);
+            this.num1.Name = "num1";
+            this.num1.Size = new System.Drawing.Size(46, 29);
+            this.num1.TabIndex = 1;
+            this.num1.Text = "1";
+            this.num1.UseVisualStyleBackColor = true;
+            // 
+            // lblImg
+            // 
+            this.lblImg.ImageList = this.imageList;
+            this.lblImg.Location = new System.Drawing.Point(114, 3);
+            this.lblImg.Name = "lblImg";
+            this.lblImg.Size = new System.Drawing.Size(320, 300);
+            this.lblImg.TabIndex = 0;
+            // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "1.png");
+            this.imageList.Images.SetKeyName(1, "2.png");
+            this.imageList.Images.SetKeyName(2, "3.png");
+            this.imageList.Images.SetKeyName(3, "4.png");
+            this.imageList.Images.SetKeyName(4, "5.png");
+            this.imageList.Images.SetKeyName(5, "6.png");
+            this.imageList.Images.SetKeyName(6, "7.png");
+            this.imageList.Images.SetKeyName(7, "8.png");
+            this.imageList.Images.SetKeyName(8, "9.png");
+            this.imageList.Images.SetKeyName(9, "10.png");
+            // 
+            // todayscore_confirm
+            // 
+            this.todayscore_confirm.Location = new System.Drawing.Point(151, 377);
+            this.todayscore_confirm.Name = "todayscore_confirm";
+            this.todayscore_confirm.Size = new System.Drawing.Size(209, 43);
+            this.todayscore_confirm.TabIndex = 2;
+            this.todayscore_confirm.Text = "오늘의 점수 주기";
+            this.todayscore_confirm.UseVisualStyleBackColor = true;
+            this.todayscore_confirm.Click += new System.EventHandler(this.todayscore_confirm_Click);
             // 
             // Form1
             // 
@@ -247,7 +430,7 @@ namespace WindowsFormsApplication1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(588, 556);
             this.Controls.Add(this.dtpTime);
-            this.Controls.Add(this.todayscore);
+            this.Controls.Add(this.mymemoview);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -256,7 +439,9 @@ namespace WindowsFormsApplication1
             this.tabPage3.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.todayscore.ResumeLayout(false);
+            this.mymemoview.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,7 +450,6 @@ namespace WindowsFormsApplication1
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpTime;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btntoday_Modify;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button btndaily_save;
@@ -279,10 +463,23 @@ namespace WindowsFormsApplication1
         private System.Windows.Forms.Button btntodaysave_Click;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabControl todayscore;
+        private System.Windows.Forms.TabControl mymemoview;
         private System.Windows.Forms.ColumnHeader columnno;
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.RadioButton num1;
+        private System.Windows.Forms.Label lblImg;
+        private System.Windows.Forms.ImageList imageList;
+        private System.Windows.Forms.RadioButton num10;
+        private System.Windows.Forms.RadioButton num9;
+        private System.Windows.Forms.RadioButton num8;
+        private System.Windows.Forms.RadioButton num7;
+        private System.Windows.Forms.RadioButton num6;
+        private System.Windows.Forms.RadioButton num5;
+        private System.Windows.Forms.RadioButton num4;
+        private System.Windows.Forms.RadioButton num3;
+        private System.Windows.Forms.RadioButton num2;
+        private System.Windows.Forms.Button todayscore_confirm;
     }
 }
 

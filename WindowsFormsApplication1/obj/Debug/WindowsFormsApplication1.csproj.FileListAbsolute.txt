@@ -17,3 +17,13 @@ C:\Users\eiwak\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Deb
 C:\Users\eiwak\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 C:\Users\eiwak\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
 C:\Users\eiwak\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\MySql.Data.dll
+C:\Users\eiwak\Desktop\mymemo project\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\eiwak\Desktop\mymemo project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\eiwak\Desktop\mymemo project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\eiwak\Desktop\mymemo project\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\eiwak\Desktop\mymemo project\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\eiwak\Desktop\mymemo project\WindowsFormsApplication1\bin\Debug\MySql.Data.dll
+C:\Users\eiwak\Desktop\mymemo project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\eiwak\Desktop\mymemo project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\eiwak\Desktop\mymemo project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\eiwak\Desktop\mymemo project\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
