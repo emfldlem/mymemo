@@ -44,13 +44,14 @@ namespace WindowsFormsApplication1
             this.ColumnTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnschedule = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.today_schaduel = new System.Windows.Forms.TextBox();
+            this.today_schadule = new System.Windows.Forms.TextBox();
             this.today_time = new System.Windows.Forms.TextBox();
             this.btntodaysave_Click = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.mymemoview = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.todayscore_confirm = new System.Windows.Forms.Button();
             this.num10 = new System.Windows.Forms.RadioButton();
             this.num9 = new System.Windows.Forms.RadioButton();
             this.num8 = new System.Windows.Forms.RadioButton();
@@ -63,7 +64,6 @@ namespace WindowsFormsApplication1
             this.num1 = new System.Windows.Forms.RadioButton();
             this.lblImg = new System.Windows.Forms.Label();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
-            this.todayscore_confirm = new System.Windows.Forms.Button();
             this.tabPage3.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.mymemoview.SuspendLayout();
@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1
             this.btntoday_Modify.TabIndex = 4;
             this.btntoday_Modify.Text = "수정";
             this.btntoday_Modify.UseVisualStyleBackColor = true;
-            this.btntoday_Modify.Click += new System.EventHandler(this.btntoday_Modify_Click);
+            this.btntoday_Modify.Click += new System.EventHandler(this.btn_todayschadule_modify);
             // 
             // tabPage3
             // 
@@ -114,13 +114,13 @@ namespace WindowsFormsApplication1
             // 
             // btndaily_save
             // 
-            this.btndaily_save.Location = new System.Drawing.Point(350, 4);
+            this.btndaily_save.Location = new System.Drawing.Point(445, 6);
             this.btndaily_save.Name = "btndaily_save";
             this.btndaily_save.Size = new System.Drawing.Size(105, 25);
             this.btndaily_save.TabIndex = 1;
             this.btndaily_save.Text = "하루 저장";
             this.btndaily_save.UseVisualStyleBackColor = true;
-            this.btndaily_save.Click += new System.EventHandler(this.btnSave_Click);
+            this.btndaily_save.Click += new System.EventHandler(this.btn_daily_save);
             // 
             // txtDaily
             // 
@@ -129,14 +129,13 @@ namespace WindowsFormsApplication1
             this.txtDaily.Name = "txtDaily";
             this.txtDaily.Size = new System.Drawing.Size(547, 346);
             this.txtDaily.TabIndex = 0;
-            this.txtDaily.TextChanged += new System.EventHandler(this.txtDaily_TextChanged);
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.delete);
             this.tabPage1.Controls.Add(this.btntoday_Modify);
             this.tabPage1.Controls.Add(this.lvList);
-            this.tabPage1.Controls.Add(this.today_schaduel);
+            this.tabPage1.Controls.Add(this.today_schadule);
             this.tabPage1.Controls.Add(this.today_time);
             this.tabPage1.Controls.Add(this.btntodaysave_Click);
             this.tabPage1.Controls.Add(this.label3);
@@ -157,7 +156,7 @@ namespace WindowsFormsApplication1
             this.delete.TabIndex = 20;
             this.delete.Text = "삭제";
             this.delete.UseVisualStyleBackColor = true;
-            this.delete.Click += new System.EventHandler(this.btntoday_Delete_Click);
+            this.delete.Click += new System.EventHandler(this.btn_todayschadule_delete);
             // 
             // lvList
             // 
@@ -174,7 +173,6 @@ namespace WindowsFormsApplication1
             this.lvList.TabIndex = 19;
             this.lvList.UseCompatibleStateImageBehavior = false;
             this.lvList.View = System.Windows.Forms.View.Details;
-            this.lvList.SelectedIndexChanged += new System.EventHandler(this.lvList_SelectedIndexChanged);
             this.lvList.Click += new System.EventHandler(this.lvList_Click);
             // 
             // ColumnTime
@@ -192,12 +190,12 @@ namespace WindowsFormsApplication1
             this.columnno.Text = "번호";
             this.columnno.Width = 124;
             // 
-            // today_schaduel
+            // today_schadule
             // 
-            this.today_schaduel.Location = new System.Drawing.Point(202, 3);
-            this.today_schaduel.Name = "today_schaduel";
-            this.today_schaduel.Size = new System.Drawing.Size(270, 25);
-            this.today_schaduel.TabIndex = 4;
+            this.today_schadule.Location = new System.Drawing.Point(202, 3);
+            this.today_schadule.Name = "today_schadule";
+            this.today_schadule.Size = new System.Drawing.Size(270, 25);
+            this.today_schadule.TabIndex = 4;
             // 
             // today_time
             // 
@@ -214,7 +212,7 @@ namespace WindowsFormsApplication1
             this.btntodaysave_Click.TabIndex = 5;
             this.btntodaysave_Click.Text = "입력";
             this.btntodaysave_Click.UseVisualStyleBackColor = true;
-            this.btntodaysave_Click.Click += new System.EventHandler(this.button1_Click);
+            this.btntodaysave_Click.Click += new System.EventHandler(this.btn_todayschadule_save);
             // 
             // label3
             // 
@@ -266,6 +264,16 @@ namespace WindowsFormsApplication1
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "오늘의 점수";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // todayscore_confirm
+            // 
+            this.todayscore_confirm.Location = new System.Drawing.Point(151, 377);
+            this.todayscore_confirm.Name = "todayscore_confirm";
+            this.todayscore_confirm.Size = new System.Drawing.Size(209, 43);
+            this.todayscore_confirm.TabIndex = 2;
+            this.todayscore_confirm.Text = "오늘의 점수 주기";
+            this.todayscore_confirm.UseVisualStyleBackColor = true;
+            this.todayscore_confirm.Click += new System.EventHandler(this.btn_todayscore_save);
             // 
             // num10
             // 
@@ -393,6 +401,7 @@ namespace WindowsFormsApplication1
             // 
             // lblImg
             // 
+            this.lblImg.ImageIndex = 10;
             this.lblImg.ImageList = this.imageList;
             this.lblImg.Location = new System.Drawing.Point(114, 3);
             this.lblImg.Name = "lblImg";
@@ -413,16 +422,7 @@ namespace WindowsFormsApplication1
             this.imageList.Images.SetKeyName(7, "8.png");
             this.imageList.Images.SetKeyName(8, "9.png");
             this.imageList.Images.SetKeyName(9, "10.png");
-            // 
-            // todayscore_confirm
-            // 
-            this.todayscore_confirm.Location = new System.Drawing.Point(151, 377);
-            this.todayscore_confirm.Name = "todayscore_confirm";
-            this.todayscore_confirm.Size = new System.Drawing.Size(209, 43);
-            this.todayscore_confirm.TabIndex = 2;
-            this.todayscore_confirm.Text = "오늘의 점수 주기";
-            this.todayscore_confirm.UseVisualStyleBackColor = true;
-            this.todayscore_confirm.Click += new System.EventHandler(this.todayscore_confirm_Click);
+            this.imageList.Images.SetKeyName(10, "what.png");
             // 
             // Form1
             // 
@@ -433,7 +433,7 @@ namespace WindowsFormsApplication1
             this.Controls.Add(this.mymemoview);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "My Memo";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -458,7 +458,7 @@ namespace WindowsFormsApplication1
         private System.Windows.Forms.ListView lvList;
         private System.Windows.Forms.ColumnHeader ColumnTime;
         private System.Windows.Forms.ColumnHeader columnschedule;
-        private System.Windows.Forms.TextBox today_schaduel;
+        private System.Windows.Forms.TextBox today_schadule;
         private System.Windows.Forms.TextBox today_time;
         private System.Windows.Forms.Button btntodaysave_Click;
         private System.Windows.Forms.Label label3;
